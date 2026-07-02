@@ -17,9 +17,9 @@ An interactive, turn-based battle game built in **Python**. The system uses an o
 * **`arena.py` (`Arena`):** Manages the game lifecycle. It handles turn progression, aggregates damage arrays, detects round completions, evaluates win-loss outcomes, and exports game summaries.
 * **`trainer.py` (`Trainer`):** Manages individual player status variables, controlling data snapshots, tracking health thresholds, and checking living/dead status.
 * **`deck.py` (`Deck`):** Serves as an indexable list tracking internal cards. Overrides fundamental magic dunder methods (`__len__`, `__iter__`, `__contains__`, `__str__`) to integrate with standard Python operations.
-* **`animon.py` (`Animon`):** Defines base stats and structural metadata. It calculates baseline damage formulas and relies on the animon type to override as to scale multi-element combat modifiers[cite: 2].
+* **`animon.py` (`Animon`):** Defines base stats and structural metadata. It calculates basic damage formulas and relies on the animon type to override as to scale the different animon type advantages. 
 
-### Custom Exception Suite
-* **`invalid_stat_error.py`:** Catches invalid negative numbers passed into power or defense constructors[cite: 2, 7].
-* **`deck_full_error.py`:** Prevents cards from overflowing structural deck size restrictions[cite: 4, 6].
-* **`deck_empty_error.py`:** Interrupts array parsing routines if a trainer attempts to draw a piece from an exhausted pile[cite: 3, 4, 5].
+### Custom Exceptions
+* **`invalid_stat_error.py`:** Catches invalid negative numbers passed into power or defense constructors.
+* **`deck_full_error.py`:** Prevents cards from overflowing structural deck size restrictions.
+* **`deck_empty_error.py`:** Interrupts array parsing routines if a trainer attempts to draw a card from an empty deck.
