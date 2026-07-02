@@ -13,11 +13,11 @@ An interactive, turn-based battle game built in **Python**. The system uses an o
 * **Automated Battle Logs & Diagnostics:** Runs continuous checking loops via the `Arena` class that captures structural game states, calculates changing health totals, handles variable state and game resetting, and automatically dumps runtime diagnostics into a permanent local file (`battlelog.txt`).
 
 ### Core Game Loop & Entities
-* **`main.py`:** The primary file orchestrating the program execution[cite: 8]. It processes command-line arguments to resolve input configurations, handles deck initialization, handles error-free shuffling, and starts the simulation thread[cite: 8].
-* **`arena.py` (`Arena`):** Manages the game lifecycle[cite: 3]. It handles turn progression, aggregates damage arrays, detects round completions, evaluates win-loss outcomes, and exports game summaries[cite: 3].
-* **`trainer.py` (`Trainer`):** Manages individual player status variables, controlling historical data snapshots, tracking health thresholds, and checking living/dead status[cite: 9].
-* **`deck.py` (`Deck`):** Serves as an indexable list wrapper tracking internal cards[cite: 4]. Overrides fundamental magic dunder methods (`__len__`, `__iter__`, `__contains__`, `__str__`) to seamlessly integrate with standard Python collection operations[cite: 4].
-* **`animon.py` (`Animon`):** Defines base stats and structural metadata[cite: 2]. It calculates baseline damage formulas and relies on the animon type to override as to scale multi-element combat modifiers[cite: 2].
+* **`main.py`:** The primary file for the program executio. It processes command-line arguments to resolve input configurations, handles deck initialization, handles error-free shuffling, and starts the simulation thread.
+* **`arena.py` (`Arena`):** Manages the game lifecycle. It handles turn progression, aggregates damage arrays, detects round completions, evaluates win-loss outcomes, and exports game summaries.
+* **`trainer.py` (`Trainer`):** Manages individual player status variables, controlling data snapshots, tracking health thresholds, and checking living/dead status.
+* **`deck.py` (`Deck`):** Serves as an indexable list tracking internal cards. Overrides fundamental magic dunder methods (`__len__`, `__iter__`, `__contains__`, `__str__`) to integrate with standard Python operations.
+* **`animon.py` (`Animon`):** Defines base stats and structural metadata. It calculates baseline damage formulas and relies on the animon type to override as to scale multi-element combat modifiers[cite: 2].
 
 ### Custom Exception Suite
 * **`invalid_stat_error.py`:** Catches invalid negative numbers passed into power or defense constructors[cite: 2, 7].
