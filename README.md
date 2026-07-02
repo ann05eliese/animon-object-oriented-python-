@@ -21,5 +21,5 @@ An interactive, turn-based battle game built in **Python**. The system uses an o
 
 ### Custom Exceptions
 * **`invalid_stat_error.py`:** Catches invalid negative numbers passed into power or defense constructors.
-* **`deck_full_error.py`:** Prevents cards from overflowing structural deck size restrictions.
+* **`deck_full_error.py`:** Prevents trainer decks from exceeding the maximum capacity of cards allowed.
 * **`deck_empty_error.py`:** Interrupts array parsing routines if a trainer attempts to draw a card from an empty deck.
