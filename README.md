@@ -1,12 +1,12 @@
 # Animon Battle Arena
 
-An interactive, turn-based battle simulation built in **Python**. The system uses an object-oriented card-game architecture where players load customized decks, manage active creature states, calculate combat interactions, and track game metrics over an automated lifecycle.
+An interactive, turn-based battle game built in **Python**. The system uses an object-oriented card-game structure where players load customized decks, manage active animon states, calculate combat interactions, and tracks game data over an automated lifecycle.
 
 ---
 
 ## Features
 
-**Class Inheritance Matrix:** Utilizes a core base class (`Animon`) to establish generic creature profiles, then derives specific sub-classes (`FireAnimon`, `WaterAnimon`, `GrassAnimon`) that override combat mechanics to execute distinct type-advantage multipliers[cite: 2].
+**Class Inheritance Matrix:** Utilizes a core base class (`Animon`) to establish generic animon profiles, then derives specific sub-classes (`FireAnimon`, `WaterAnimon`, `GrassAnimon`) that override combat mechanics to execute a specifc animon type advantage.
 * **Modular Software Composition:** Employs explicit object composition by decoupling the `Trainer` state from the underlying array-backed `Deck` module[cite: 4, 9]. The `Trainer` layer completely encapsulates the storage logic, delegating deck actions (drawing, adding, and shuffling) to specialized custom class handlers[cite: 4, 9].
 * **Robust CSV Parsing & Data Loading:** Implements an automated data-ingestion pipeline that opens exterior configuration files (like `deck1.csv` and `deck2.csv`), sanitizes raw data strings into corresponding numerical datatypes via `.isdigit()`, and instantiates appropriate polymorphic objects dynamically.
 * **Custom Error Handling Pipeline:** Features a specialized structural error architecture leveraging native exceptions (`DeckFullError`, `DeckEmptyError`, `InvalidStatError`) to securely catch out-of-bounds metrics, guard state arrays from memory overruns, and gracefully handle empty structural queues[cite: 2, 4, 5, 6, 7].
